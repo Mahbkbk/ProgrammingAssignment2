@@ -5,7 +5,7 @@ cacheinv <- function(x, ...) {
                 return(inversematrix)
         }
         data <- x$get()
-       inv <- solve(data, ...)
+        inversematrix <- solve(data, ...)
         x$setinv(inversematrix)
-       inv
+       inversematrix
 }
