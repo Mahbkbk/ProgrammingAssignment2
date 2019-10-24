@@ -1,0 +1,11 @@
+cacheinv <- function(x, ...) {
+         inversematrix  <- x$getinv()
+        if(!is.null(inversematrix)) {
+                message("getting cached data")
+                return(inversematrix)
+        }
+        data <- x$get()
+       inv <- solve(data, ...)
+        x$setinv(inversematrix)
+       inv
+}

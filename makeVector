@@ -1,0 +1,13 @@
+makeVector <- function(x = matrix()) {
+       inversematrix <- NULL
+        set <- function(y) {
+                x <<- y
+                 inversematrix  <<- NULL
+        }
+        get <- function() x
+        setinv <- function()  inversematrix <<- solve(x)
+        getinv <- function()  inversematrix 
+        list(set = set, get = get,
+             setmean = setmean,
+             getmean = getmean)
+}
